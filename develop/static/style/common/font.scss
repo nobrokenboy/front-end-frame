@@ -1,0 +1,10 @@
+/* 项目需要的字体 */
+@charset "utf-8";
+@font-face {/* 这个是兰亭方正 */
+    font-family: 'NeuesBauenDemo';
+    src: url('/develop/font/lantingfangzheng/_gbk_0-webfont.eot');
+    src: url('/develop/font/lantingfangzheng/_gbk_0-webfont.eot?#iefix') format('embedded-opentype'),
+    url('/develop/font/lantingfangzheng/_gbk_0-webfont.woff') format('woff'),
+    url('/develop/font/lantingfangzheng/_gbk_0-webfont.ttf') format('truetype'),
+    url('/develop/font/lantingfangzheng/_gbk_0-webfont.svg#NeuesBauenDemo') format('svg');
+}

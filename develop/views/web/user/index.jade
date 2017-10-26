@@ -1,0 +1,45 @@
+extends ../layout/header.pug
+append head
+    title 生活记录从这里开始
+    style 
+        include:scss:autoprefixer ./index.scss
+append content
+    section.login-register
+        hgroup
+            h1.theme-name(align="center") 生活记录从这里开始
+            .login-wrapper
+                .title.active
+                    a.pull-left.link-login.select(href="#login") 登录
+                    a.pull-right.link-register(href="#register") 注册
+                    .slide-block
+                form#login
+                    .form-item.input-item
+                        input(type='text',placeholder="手机号/邮箱")
+                    .form-item.input-item
+                        input(type='password',placeholder="密码")   
+                    .form-item.msg-box.clearfix
+                        .pull-left  
+                            input(type="checkbox")
+                            label 下次自动登录
+                        .pull-right
+                            a 忘记密码
+                    .form-item 
+                        button.btn(type="button") 登录
+                    .form-item
+                        span 还没有账号？
+                        a(href="#register") 马上注册                   
+                form#register    
+                    .form-item.input-item
+                        input(type='text',placeholder="手机号/邮箱")
+                    .form-item.input-item
+                        input(type='password',placeholder="密码")
+                    .form-item.input-item
+                        input(type='password',placeholder="确认密码")
+                    .form-item 
+                        button.btn(type="button") 注册      
+append foot
+    script
+        include:babel(presets=['es2015']) ./index.js
+        
+        
+    

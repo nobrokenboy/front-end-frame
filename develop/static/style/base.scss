@@ -1,0 +1,9 @@
+@charset "utf-8";
+@import "common/reset";
+@import "common/animate.min";
+@import "common/my_animation";
+@import "common/iconfont";//iconfont 相关配置文件
+/* @import "common/common_mobile";//手机端的基本配置文件 */
+@import "common/common_pc";//pc端的基本配置文件
+@import "common/friendly_reminder";//友好界面提示配置文件
+@import "components/common";//组件的公共样式

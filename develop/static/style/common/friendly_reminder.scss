@@ -1,0 +1,26 @@
+@charset "utf-8";
+#errorContainer{
+  width:1200px;
+  margin:0 auto;
+  text-align:center;
+  img{
+    width:30%;
+    margin-top:50px;
+  }
+  .message{
+    display:inline-block;
+    width:50%;
+    margin-left:3%;
+    margin-top:130px;
+    vertical-align:top;
+    text-align:left;
+    .title-tips{
+      font-size:30px;
+      color:#434a54;
+    }
+    .title-tips-2{
+      text-indent:65px;
+    }
+
+  }
+}

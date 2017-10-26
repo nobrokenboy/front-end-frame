@@ -1,0 +1,24 @@
+/*加载层*/
+.loading-animate{
+    -webkit-animation: roll 1.5s infinite ease-in-out;
+    animation: roll 1.5s infinite ease-in-out;
+  }
+
+/* 360度旋转 */
+@-webkit-keyframes roll {
+    from{
+        -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
+
+@keyframes roll {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform:rotate(360deg);
+        }
+}

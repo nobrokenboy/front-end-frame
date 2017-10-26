@@ -1,0 +1,50 @@
+<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>-->
+doctype html
+html
+   head
+         block head
+            meta(charset="utf-8")
+            meta(http-equiv="X-UA-Compatible" content="IE=edge,chrome=1")
+            meta(name="renderer" content="webkit")
+            meta(name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+            link(rel="icon" href="http://static.test.o-home.com/v2/image/layouts/ohome.ico")
+            link(rel="stylesheet" href=ctx+"/css/base.min.css")
+            script.
+                <!--[if lte IE 9]>
+                      window.onload = function () {
+                            var msg1="亲爱的用户：";
+                            var msg2="请使用ie10以上浏览器，或者谷歌/火狐浏览器等内核浏览器，蟹蟹";
+                            document.body.innerHTML = "<div id='errorContainer'>"+
+                            "<img src='../static/image/common/tips.png'/>"+
+                            "<div class='message'>"+
+                            "<h2 id='1' class='title-tips title-tips-1'></h2>"+
+                            "<h2 id='2' class='title-tips title-tips-2'></h2>"+
+                            "</div>"+
+                            "</div>";
+                            var timer=setInterval(dealText,60);
+                            var text1=document.getElementById("1");
+                            var text2=document.getElementById("2");
+                            var isText1Gone=false;
+                            var subTextLastIndex=1;
+                            var subText2LastIndex=1;
+                            function dealText(){
+                                if(!isText1Gone){
+                                    text1.innerText=msg1.substring(0,subTextLastIndex);
+                                    if(subTextLastIndex<msg1.length){
+                                        subTextLastIndex++;
+                                    }else{
+                                     isText1Gone=true;
+                                    }
+                                }else{
+                                    text2.innerText=msg2.substring(0,subText2LastIndex);
+                                    if(subText2LastIndex<msg2.length){
+                                        subText2LastIndex++;
+                                    }
+                                 }
+                            }
+                     };
+                <![endif]-->
+            script(src=ctx+"/js/config.js")
+   body
+         block content
+         block foot
