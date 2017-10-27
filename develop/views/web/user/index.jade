@@ -2,7 +2,7 @@ extends ../layout/header.pug
 append head
     title 生活记录从这里开始
     style 
-        include:scss:autoprefixer ./index.scss
+        include:scss(outputStyle="compressed"):autoprefixer ./index.scss
 append content
     section.login-register
         hgroup
@@ -24,7 +24,7 @@ append content
                         .pull-right
                             a 忘记密码
                     .form-item 
-                        button.btn(type="button") 登录
+                        button.btn.btn-login(type="button") 登录
                     .form-item
                         span 还没有账号？
                         a(href="#register") 马上注册                   
@@ -36,7 +36,7 @@ append content
                     .form-item.input-item
                         input(type='password',placeholder="确认密码")
                     .form-item 
-                        button.btn(type="button") 注册      
+                        button.btn.btn-register(type="button") 注册  
 append foot
     script
         include:babel(presets=['es2015']) ./index.js

@@ -34,7 +34,7 @@ gulp.task('brower-sync',function(){
         server:{
             baseDir:prefix,
             /* index:"WEB-INF/views/login.html" */
-            index:"/views/web/user/index.html"
+            index:"/views/web/**/*.html"//页面打开http://localhost:3000/views/web/user/index.html
         },
         files:[prefix+'/**/*.*'],
         notify: false
@@ -143,13 +143,11 @@ gulp.task('webpack',shell.task([
 gulp.task("init",function(){
     gulp.run('css');
     gulp.run('jade');
-    gulp.run('jsp');
     gulp.run('image');
     gulp.run('font');
     gulp.run('data');
     gulp.run('config');
     gulp.run('webpack');
-    gulp.run('brower-sync');
     //打开监听
     gulp.run('watcher');
 

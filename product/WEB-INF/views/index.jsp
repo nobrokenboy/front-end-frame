@@ -1,52 +1,37 @@
-<!--<%@ page contentType="text/html;charset=UTF-8" language="java" %>--><!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="renderer" content="webkit">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-    <link rel="icon" href="http://static.test.o-home.com/v2/image/layouts/ohome.ico">
-    <link rel="stylesheet" href="/static/css/base.min.css">
-    <script>
-      <!--[if lte IE 9]>
-            window.onload = function () {
-                  var msg1="亲爱的用户：";
-                  var msg2="请使用ie10以上浏览器，或者谷歌/火狐浏览器等内核浏览器，蟹蟹";
-                  document.body.innerHTML = "<div id='errorContainer'>"+
-                  "<img src='../static/image/common/tips.png'/>"+
-                  "<div class='message'>"+
-                  "<h2 id='1' class='title-tips title-tips-1'></h2>"+
-                  "<h2 id='2' class='title-tips title-tips-2'></h2>"+
-                  "</div>"+
-                  "</div>";
-                  var timer=setInterval(dealText,60);
-                  var text1=document.getElementById("1");
-                  var text2=document.getElementById("2");
-                  var isText1Gone=false;
-                  var subTextLastIndex=1;
-                  var subText2LastIndex=1;
-                  function dealText(){
-                      if(!isText1Gone){
-                          text1.innerText=msg1.substring(0,subTextLastIndex);
-                          if(subTextLastIndex<msg1.length){
-                              subTextLastIndex++;
-                          }else{
-                           isText1Gone=true;
-                          }
-                      }else{
-                          text2.innerText=msg2.substring(0,subText2LastIndex);
-                          if(subText2LastIndex<msg2.length){
-                              subText2LastIndex++;
-                          }
-                       }
-                  }
-           };
-      <![endif]-->
-    </script>
-    <script src="/static/js/config.js"></script>
-    <title>生活记录从这里开始</title>
-    <style>
-       @charset "UTF-8";
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%><%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%><c:set var="ctx" value="${pageContext.request.contextPath}" /><!DOCTYPE html><html><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta name="renderer" content="webkit"><meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"><link rel="icon" href="http://static.test.o-home.com/v2/image/layouts/ohome.ico"><link rel="stylesheet" href="${ctx}/static/css/base.min.css"><script><!--[if lte IE 9]>
+      window.onload = function () {
+            var msg1="亲爱的用户：";
+            var msg2="请使用ie10以上浏览器，或者谷歌/火狐浏览器等内核浏览器，蟹蟹";
+            document.body.innerHTML = "<div id='errorContainer'>"+
+            "<img src='../static/image/common/tips.png'/>"+
+            "<div class='message'>"+
+            "<h2 id='1' class='title-tips title-tips-1'></h2>"+
+            "<h2 id='2' class='title-tips title-tips-2'></h2>"+
+            "</div>"+
+            "</div>";
+            var timer=setInterval(dealText,60);
+            var text1=document.getElementById("1");
+            var text2=document.getElementById("2");
+            var isText1Gone=false;
+            var subTextLastIndex=1;
+            var subText2LastIndex=1;
+            function dealText(){
+                if(!isText1Gone){
+                    text1.innerText=msg1.substring(0,subTextLastIndex);
+                    if(subTextLastIndex<msg1.length){
+                        subTextLastIndex++;
+                    }else{
+                     isText1Gone=true;
+                    }
+                }else{
+                    text2.innerText=msg2.substring(0,subText2LastIndex);
+                    if(subText2LastIndex<msg2.length){
+                        subText2LastIndex++;
+                    }
+                 }
+            }
+     };
+<![endif]--></script><script src="${ctx}/static/js/config.js"></script><title>生活记录从这里开始</title><style> @charset "UTF-8";
 * {
   font-family: "微软雅黑";
   box-sizing: border-box; }
@@ -200,54 +185,7 @@ form {
     -webkit-transform: translateX(100%); }
   100% {
     -webkit-transform: translateX(0); } }
-
-    </style>
-  </head>
-  <body>
-    <section class="login-register">
-      <hgroup>
-        <h1 class="theme-name" align="center">生活记录从这里开始</h1>
-        <div class="login-wrapper">
-          <div class="title active"><a class="pull-left link-login select" href="#login">登录</a><a class="pull-right link-register" href="#register">注册</a>
-            <div class="slide-block"></div>
-          </div>
-          <form id="login">
-            <div class="form-item input-item">
-              <input type="text" placeholder="手机号/邮箱">
-            </div>
-            <div class="form-item input-item">
-              <input type="password" placeholder="密码">
-            </div>
-            <div class="form-item msg-box clearfix">
-              <div class="pull-left"> 
-                <input type="checkbox">
-                <label>下次自动登录</label>
-              </div>
-              <div class="pull-right"><a>忘记密码</a></div>
-            </div>
-            <div class="form-item"> 
-              <button class="btn" type="button">登录</button>
-            </div>
-            <div class="form-item"><span>还没有账号？</span><a href="#register">马上注册                   </a></div>
-          </form>
-          <form id="register">   
-            <div class="form-item input-item">
-              <input type="text" placeholder="手机号/邮箱">
-            </div>
-            <div class="form-item input-item">
-              <input type="password" placeholder="密码">
-            </div>
-            <div class="form-item input-item">
-              <input type="password" placeholder="确认密码">
-            </div>
-            <div class="form-item"> 
-              <button class="btn" type="button">注册      </button>
-            </div>
-          </form>
-        </div>
-      </hgroup>
-    </section>
-    <script>"use strict";
+</style></head><body><section class="login-register"><hgroup><h1 class="theme-name" align="center">生活记录从这里开始</h1><div class="login-wrapper"><div class="title active"><a class="pull-left link-login select" href="#login">登录</a><a class="pull-right link-register" href="#register">注册</a><div class="slide-block"></div></div><form id="login"><div class="form-item input-item"><input type="text" placeholder="手机号/邮箱"></div><div class="form-item input-item"><input type="password" placeholder="密码"></div><div class="form-item msg-box clearfix"><div class="pull-left"> <input type="checkbox"><label>下次自动登录</label></div><div class="pull-right"><a>忘记密码</a></div></div><div class="form-item"> <button class="btn" type="button">登录</button></div><div class="form-item"><span>还没有账号？</span><a href="#register">马上注册                   </a></div></form><form id="register">   <div class="form-item input-item"><input type="text" placeholder="手机号/邮箱"></div><div class="form-item input-item"><input type="password" placeholder="密码"></div><div class="form-item input-item"><input type="password" placeholder="确认密码"></div><div class="form-item"> <button class="btn" type="button">注册      </button></div></form></div></hgroup></section><script>"use strict";
 
 window.onload = function () {
     //获取切换的按钮
@@ -314,7 +252,4 @@ window.onload = function () {
             addClass(obj, classOfName);
         }
     };
-};
-    </script>
-  </body>
-</html>
+};</script></body></html>

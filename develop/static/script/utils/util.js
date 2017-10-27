@@ -1,5 +1,5 @@
 import _ from "lodash";
-export default {
+export default{
 	url:window.location.href,
 	search:window.location.search,
 	isIndexOfValue(val){
@@ -284,3 +284,5 @@ export default {
 
 
 }
+
+

@@ -4,9 +4,9 @@ import util from "utils/util";
 import lib from "utils/lib";
 import $ from "jquery";
 import Vue from "vue";
-import {myLoading} from "components/components"
+import {myLoading} from "components/components";
+import {datePicker} from 'iview/src/components/date-picker';
 
-/* Vue.component("my-loading", myLoading); */
 const vm=new Vue({
     data:{
         items:{},
@@ -14,7 +14,8 @@ const vm=new Vue({
         isShowLoading:true
     },
     components:{
-        "my-loading":myLoading
+        "my-loading":myLoading,
+        'date-picker':datePicker
     },
     mounted(){
         this.getAddress();

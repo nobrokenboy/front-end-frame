@@ -49,10 +49,10 @@
   <body>
     <div id="apple">
       <div v-for="item in items.region">{{item}}</div>
-      <h1>{{stars}} </h1><a :href="">进入详情页面</a>
+      <h1>{{stars}} </h1><a>进入详情页面</a>
       <my-loading v-if="isShowLoading" :is-show-loading="isShowLoading" :data-type="0"></my-loading>
+      <date-picker type="date" placeholder="选择日期" style="width: 200px;"></date-picker>
     </div>
-    <script>window.name1="Hello world";</script>
     <script src="/static/js/bundle.js"> </script>
   </body>
 </html>

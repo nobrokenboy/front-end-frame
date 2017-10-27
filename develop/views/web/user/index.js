@@ -8,6 +8,10 @@ window.onload=function(){
      var loginForm=document.getElementById("login");
      //获取注册界面
      var registerForm=document.getElementById("register");
+     //获取登录按钮
+     var loginBtn=document.querySelector(".btn-login");
+     //获取注册按钮
+     var registerBtn=document.querySelector(".btn-register");
      if(window.addEventListener){
          btnLinkLogin.addEventListener("click",function(e){
              var self=this;
@@ -18,18 +22,23 @@ window.onload=function(){
              loginForm.style.display="block";
              registerForm.style.display="none";
          });
-     }
-     if(window.addEventListener){
+
          btnLinkRegister.addEventListener("click",function(e){
-             var self=this;
-             addClass(slideBlock,"active");
-             addClass(self,"select");
-             removeClass(btnLinkLogin,"select");
-             //界面处理
-             registerForm.style.display="block";
-             loginForm.style.display="none";
-             
-         });
+            var self=this;
+            addClass(slideBlock,"active");
+            addClass(self,"select");
+            removeClass(btnLinkLogin,"select");
+            //界面处理
+            registerForm.style.display="block";
+            loginForm.style.display="none";
+              
+        });
+
+         //登录跳转
+         loginBtn.addEventListener("click",function(e){
+            console.log("hello233");
+            window.location.href="../module1/index.html";
+        }); 
      }
      
      //实现登陆

@@ -5,11 +5,10 @@ append content
     #apple
       div(v-for="item in items.region") {{item}}
       h1 {{stars}} 
-      a(:href="") 进入详情页面
+      a() 进入详情页面
       my-loading(v-if="isShowLoading",:is-show-loading="isShowLoading",:data-type="0")
-
+      date-picker(type="date",placeholder="选择日期",style="width: 200px")
+      
 append foot
-    script.
-        window.name1="Hello world";
     script(src=ctx+"/js/bundle.js") 
     

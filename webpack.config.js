@@ -24,7 +24,9 @@ module.exports={
     entry:"./develop/main.js",
     output:{
         path:path.resolve(__dirname,"./product/static/js"),
-        filename:"bundle.[hash].js"
+       /*  publicPath:"",//用于配置文件发布路径，如CDN或本地服务器 */
+        /* filename:"bundle.[hash].js", */
+        filename:"bundle.js"
     },
     module:{
         rules:[
@@ -50,6 +52,10 @@ module.exports={
                         'pug':'pug-loader'
                     }
                 }
+            },
+            { 
+                test: /iview.src.*?js$/, 
+                loader: 'babel-loader'
             },
             {
                 test: /\.js$/,
@@ -108,7 +114,7 @@ module.exports={
              },
              sourceMap: false
          }),
-        new webpack.ProvidePlugin({
+        new webpack.ProvidePlugin({//自动加载模块
             jQuery:'jquery',
             $: 'jquery',
             _:'lib'

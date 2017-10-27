@@ -46,160 +46,7 @@
     <script src="/static/js/config.js"></script>
     <title>生活记录从这里开始</title>
     <style>
-       @charset "UTF-8";
-* {
-  font-family: "微软雅黑";
-  box-sizing: border-box; }
-
-body, html {
-  width: 100%;
-  height: 100%;
-  overflow: hidden; }
-
-.pull-left {
-  float: left; }
-
-.pull-right {
-  float: right; }
-
-.clearfix:after {
-  display: block;
-  content: ".";
-  height: 0;
-  visibility: hidden;
-  clear: both; }
-
-.clearfix {
-  *zoom: 1; }
-
-.btn {
-  border: none;
-  background-color: red;
-  color: #fff;
-  cursor: pointer; }
-
-a {
-  color: #3cf;
-  cursor: pointer; }
-
-body {
-  background: url(http://www.17sucai.com/preview/124020/2015-11-06/login/img/logo_bg.jpg) no-repeat center center; }
-
-.theme-name {
-  margin-top: 80px;
-  color: #fff;
-  font-size: 36px; }
-
-:target {
-  color: red; }
-
-.login-wrapper {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  width: 350px;
-  height: 400px;
-  padding: 10px 30px;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  background-color: #fff; }
-
-.title {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  font-size: 18px;
-  color: #888888;
-  border-bottom: 1px solid #ccc; }
-
-.slide-block {
-  position: absolute;
-  left: 15%;
-  bottom: 0;
-  content: "";
-  width: 90px;
-  height: 2px;
-  background-color: rgba(1, 1, 1, 0.5);
-  transition: left .3s ease-in; }
-
-.slide-block.active {
-  left: 55%; }
-
-.title a {
-  display: inline-block;
-  overflow: hidden;
-  margin-bottom: 2px;
-  padding: 0 20px;
-  color: #ccc;
-  text-decoration: none; }
-
-.title a:nth-child(1) {
-  margin-left: 50px; }
-
-.title a:nth-child(2) {
-  margin-right: 50px; }
-
-.title a:hover,
-.title a.select {
-  color: #333; }
-
-.form-item {
-  width: 100%;
-  margin-bottom: 10px;
-  color: #666666; }
-
-.input-item {
-  margin-bottom: 20px; }
-
-input[type="text"],
-input[type="password"],
-button {
-  width: 100%;
-  height: 40px;
-  line-height: 40px; }
-
-input[type="text"],
-input[type="password"] {
-  padding-left: 10px;
-  border: 1px solid #ccc; }
-
-form {
-  background-color: #fff;
-  margin-top: 20px; }
-
-#register {
-  display: none; }
-
-.msg-box {
-  font-size: 14px; }
-
-/*动画效果*/
-.animate {
-  -webkit-animation-duration: .8s;
-  animation-duration: .8s;
-  -webkit-animation-timing-function: ease-in;
-  animation-timing-function: ease-in; }
-
-.moveLeft {
-  -webkit-animation-name: moveLeft;
-  animation-name: moveLeft; }
-
-.moveRight {
-  -webkit-animation-name: moveRight;
-  animation-name: moveRight; }
-
-@-webkit-keyframes moveLeft {
-  0% {
-    -webkit-transform: translateX(-100%); }
-  100% {
-    -webkit-transform: translateX(0); } }
-
-@-webkit-keyframes moveRight {
-  0% {
-    -webkit-transform: translateX(100%); }
-  100% {
-    -webkit-transform: translateX(0); } }
+       *{font-family:"微软雅黑";box-sizing:border-box}body,html{width:100%;height:100%;overflow:hidden}.pull-left{float:left}.pull-right{float:right}.clearfix:after{display:block;content:".";height:0;visibility:hidden;clear:both}.clearfix{*zoom:1}.btn{border:none;background-color:red;color:#fff;cursor:pointer}a{color:#3cf;cursor:pointer}body{background:url(http://www.17sucai.com/preview/124020/2015-11-06/login/img/logo_bg.jpg) no-repeat center center}.theme-name{margin-top:80px;color:#fff;font-size:36px}:target{color:red}.login-wrapper{position:absolute;top:200px;left:50%;width:350px;height:400px;padding:10px 30px;transform:translateX(-50%);-webkit-transform:translateX(-50%);background-color:#fff}.title{position:relative;width:100%;height:50px;line-height:50px;font-size:18px;color:#888888;border-bottom:1px solid #ccc}.slide-block{position:absolute;left:15%;bottom:0;content:"";width:90px;height:2px;background-color:rgba(1,1,1,0.5);transition:left .3s ease-in}.slide-block.active{left:55%}.title a{display:inline-block;overflow:hidden;margin-bottom:2px;padding:0 20px;color:#ccc;text-decoration:none}.title a:nth-child(1){margin-left:50px}.title a:nth-child(2){margin-right:50px}.title a:hover,.title a.select{color:#333}.form-item{width:100%;margin-bottom:10px;color:#666}.input-item{margin-bottom:20px}input[type="text"],input[type="password"],button{width:100%;height:40px;line-height:40px}input[type="text"],input[type="password"]{padding-left:10px;border:1px solid #ccc}form{background-color:#fff;margin-top:20px}#register{display:none}.msg-box{font-size:14px}.animate{-webkit-animation-duration:.8s;animation-duration:.8s;-webkit-animation-timing-function:ease-in;animation-timing-function:ease-in}.moveLeft{-webkit-animation-name:moveLeft;animation-name:moveLeft}.moveRight{-webkit-animation-name:moveRight;animation-name:moveRight}@-webkit-keyframes moveLeft{0%{-webkit-transform:translateX(-100%)}100%{-webkit-transform:translateX(0)}}@-webkit-keyframes moveRight{0%{-webkit-transform:translateX(100%)}100%{-webkit-transform:translateX(0)}}
 
     </style>
   </head>
@@ -226,7 +73,7 @@ form {
               <div class="pull-right"><a>忘记密码</a></div>
             </div>
             <div class="form-item"> 
-              <button class="btn" type="button">登录</button>
+              <button class="btn btn-login" type="button">登录</button>
             </div>
             <div class="form-item"><span>还没有账号？</span><a href="#register">马上注册                   </a></div>
           </form>
@@ -241,7 +88,7 @@ form {
               <input type="password" placeholder="确认密码">
             </div>
             <div class="form-item"> 
-              <button class="btn" type="button">注册      </button>
+              <button class="btn btn-register" type="button">注册  </button>
             </div>
           </form>
         </div>
@@ -259,6 +106,10 @@ window.onload = function () {
     var loginForm = document.getElementById("login");
     //获取注册界面
     var registerForm = document.getElementById("register");
+    //获取登录按钮
+    var loginBtn = document.querySelector(".btn-login");
+    //获取注册按钮
+    var registerBtn = document.querySelector(".btn-register");
     if (window.addEventListener) {
         btnLinkLogin.addEventListener("click", function (e) {
             var self = this;
@@ -269,8 +120,7 @@ window.onload = function () {
             loginForm.style.display = "block";
             registerForm.style.display = "none";
         });
-    }
-    if (window.addEventListener) {
+
         btnLinkRegister.addEventListener("click", function (e) {
             var self = this;
             addClass(slideBlock, "active");
@@ -279,6 +129,12 @@ window.onload = function () {
             //界面处理
             registerForm.style.display = "block";
             loginForm.style.display = "none";
+        });
+
+        //登录跳转
+        loginBtn.addEventListener("click", function (e) {
+            console.log("hello233");
+            window.location.href = "../module1/index.html";
         });
     }
 
